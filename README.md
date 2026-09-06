@@ -1,111 +1,132 @@
-# AI API Score Calculator & Intelligent Model Evaluation Platform
+# 🤖 AI API Score Calculator
 
-A professional ADBMS capstone starter application for evaluating, scoring,
-comparing and monitoring AI APIs/models.
+A full-stack web application designed to **evaluate, score, compare, and analyze AI APIs and AI models** using multiple performance metrics.
 
-## Stack
+The platform provides a centralized dashboard where users can evaluate AI models based on **accuracy, relevance, quality, reliability, latency, cost, and safety**, and view the results through interactive analytics and comparison interfaces.
 
-- Frontend: React + Vite + Recharts + Lucide
-- Backend: FastAPI
-- Relational DB: PostgreSQL
-- NoSQL DB: MongoDB
-- Graph DB: Neo4j
-- Planned AI/NLP: Scikit-learn + Hugging Face Transformers/BERT/Llama
-- Visualization: Plotly/Grafana
-- Cloud target: AWS
+---
 
-## Current starter features
+## 📌 Project Overview
 
-- Professional dark/light dashboard
-- Responsive sidebar navigation
-- KPI cards
-- AI score trend chart
-- Model ranking
-- API health panel
-- Evaluation configuration
-- Dynamic scoring weights
-- Local score calculation
-- Model comparison UI
-- Analytics UI
-- AI insights UI
-- API monitoring UI
-- FastAPI health/model/score endpoints
-- PostgreSQL schema
-- MongoDB collections/index examples
-- Neo4j graph schema
+With the rapid growth of AI APIs and Large Language Models (LLMs), selecting the right model for a particular application can be difficult.
 
-## Run frontend
+The **AI API Score Calculator** helps users make informed decisions by providing a structured evaluation system for different AI models.
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+The application calculates an overall score based on multiple evaluation criteria and presents the results through dashboards, analytics, model comparisons, monitoring, and user management interfaces.
 
-Open the Vite URL shown in the terminal, normally:
-http://localhost:5173
+---
 
-## Run backend
+## ✨ Key Features
 
-Create a virtual environment:
+### 📊 Dashboard
+- Overall AI API performance overview
+- Model scores
+- Evaluation statistics
+- Performance metrics
+- Quick access to major application modules
 
-```bash
-cd backend
-python -m venv venv
-```
+### 🧪 AI Model Evaluation
+Evaluate AI models using multiple metrics:
 
-Windows:
+- Accuracy
+- Relevance
+- Quality
+- Reliability
+- Latency
+- Cost
+- Safety
 
-```bash
-venv\Scripts\activate
-```
+### 🤖 Model Management
+- View available AI models
+- Compare model performance
+- View individual model metrics
+- Analyze model scores
 
-Install:
+### ⚖️ Model Comparison
+Compare multiple AI models based on:
+- Overall score
+- Accuracy
+- Latency
+- Reliability
+- Cost
+- Other evaluation metrics
 
-```bash
-pip install -r requirements.txt
-```
+### 📈 Analytics
+- Evaluation statistics
+- Performance trends
+- Model performance analysis
+- Metric-based insights
 
-Run:
+### 💡 Insights
+- Identify high-performing models
+- Analyze evaluation results
+- Support AI model selection
 
-```bash
-uvicorn app.main:app --reload --port 8000
-```
+### 🖥️ Monitoring
+- Monitor AI API performance
+- Track important performance metrics
+- Observe model/API behavior
 
-API:
-http://localhost:8000
+### 👥 User Management
+- User overview
+- User-related information
+- User management interface
 
-Swagger:
-http://localhost:8000/docs
+---
 
-## Databases
+## 🧮 Evaluation Metrics
 
-PostgreSQL:
-- Create the `ai_score` database.
-- Run `database/postgres_schema.sql`.
+The application evaluates AI APIs using the following weighted metrics:
 
-MongoDB:
-- Run `database/mongodb_schema.js` in mongosh.
+| Metric | Weight |
+|---|---:|
+| Accuracy | 30% |
+| Relevance | 20% |
+| Quality | 15% |
+| Reliability | 10% |
+| Latency | 10% |
+| Cost | 10% |
+| Safety | 5% |
+| **Total** | **100%** |
 
-Neo4j:
-- Run `database/neo4j_schema.cypher` in Neo4j Browser.
+The weighted evaluation produces an overall score that can be used to compare different AI models.
 
-## Next development phases
+---
 
-1. Connect React to FastAPI.
-2. Add JWT authentication and role-based access.
-3. Persist projects/models/evaluations.
-4. Add MongoDB evaluation storage.
-5. Add Neo4j relationship queries.
-6. Integrate real AI provider adapters.
-7. Add Hugging Face/BERT semantic evaluation.
-8. Add hallucination/safety evaluation.
-9. Add Scikit-learn anomaly detection.
-10. Add Plotly analytics and Grafana monitoring.
-11. Add PDF/CSV/Excel reporting.
-12. Deploy to AWS.
+## 🏗️ System Architecture
 
-## Security note
-
-Never commit real API keys, passwords, JWT secrets or database credentials.
-Use `.env` and a cloud secret manager in production.
+```text
+                 ┌─────────────────────┐
+                 │      User           │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   React Frontend    │
+                 │                     │
+                 │ Dashboard           │
+                 │ Evaluation          │
+                 │ Models              │
+                 │ Comparison          │
+                 │ Analytics           │
+                 │ Monitoring          │
+                 │ Users               │
+                 └──────────┬──────────┘
+                            │
+                         REST API
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   FastAPI Backend   │
+                 │                     │
+                 │ API Routes          │
+                 │ Evaluation Logic    │
+                 │ Scoring Services    │
+                 │ Analytics           │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │      Database       │
+                 │      MongoDB        │
+                 └─────────────────────┘
